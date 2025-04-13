@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-0mci($3&hswrgbbt3g35u27jb0o0nhm*7z8wuynu5l!8!dod#e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['edulearn.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','edulearn.onrender.com']
 
 
 # Application definition
