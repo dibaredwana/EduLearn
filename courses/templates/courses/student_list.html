@@ -1,0 +1,34 @@
+{% extends "courses/base.html" %}
+
+{% block title %}Enrolled Students{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="text-center text-primary">Students Enrolled in {{ course.title }}</h2>
+  
+  {% if students %}
+    <table class="table table-bordered table-striped mt-4">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in students %}
+        <tr>
+          <td>{{ s.name }}</td>
+          <td>{{ s.email }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="text-center text-muted">No students enrolled in this course yet.</p>
+  {% endif %}
+  
+  <div class="text-center mt-4">
+    <a href="{% url 'course_list' %}" class="btn btn-primary">Back to Course List</a>
+  </div>
+</div>
+{% endblock %}
