@@ -53,7 +53,6 @@ urlpatterns = [
         name='password_reset_complete'
     ),
     path('courses/list/', CourseListView.as_view(), name='course_list'),
-    #path('<int:pk>/', CourseDetailView.as_view(), name='course_detail'),
     path('create/', CourseCreateView.as_view(), name='course_create'),
     path('api/courses/', CourseListAPI.as_view(), name='api_course_list'),
     path('api/courses/<int:pk>/', CourseDetailAPI.as_view(), name='api_course_detail'),
